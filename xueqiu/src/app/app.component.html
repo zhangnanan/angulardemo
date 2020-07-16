@@ -1,0 +1,7 @@
+<div class="navList">
+  <div class="navItem" (click)="addActive($event)" [routerLink]="['/']" routerlinkActive="router-link-active">首页</div>
+  <div class="navItem" (click)="addActive($event)" [routerLink]="['/screener']" routerlinkActive="router-link-active">股票</div>
+  <div class="navItem" (click)="addActive($event)" [routerLink]="['/newstock']" routerlinkActive="router-link-active">新闻</div>
+</div>
+
+<router-outlet></router-outlet>

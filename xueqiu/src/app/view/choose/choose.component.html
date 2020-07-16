@@ -1,0 +1,39 @@
+<div class="chooseRange">
+    <div class="rangeItem">
+        <span>市场：</span>
+        <select name="rangeMarket">
+            <option value="all">全部A股</option>
+            <option value="hushi">沪市</option>
+            <option value="shenshi">深市</option>
+        </select>
+    </div>
+    <div class="rangeItem">
+        <span>行业：</span>
+        <select name="rangeMarket">
+            <option value="all">全部A股</option>
+            <option *ngFor="let item of industriesList" value="item.encode">{{item.name}}</option>
+        </select>
+    </div>
+    <div class="rangeItem">
+        <span>地域板块：</span>
+        <select name="rangeMarket">
+            <option value="all">全部A股</option>
+            <option *ngFor="let item of areaList" value="{{item}}">{{areas[item]}}</option>
+        </select>
+    </div>
+    
+</div>
+<h3>条件设置</h3>
+<div class="tools">
+    <div class="toolsLeft">
+        <div class="tabItem" *ngFor="let item of tabList" (click)="toggleTabs(item)">
+            <h4>{{item}}</h4>
+        </div>
+    </div>
+    <div class="toolsContent">
+        <div class="checkItem" *ngFor="let item of toolsObj[currentTab]">
+            <input type="checkbox" name="{{item.field}}" id="{{item.field}}" value="{{item.field}}">
+            <label for="{{item.field}}">{{item.name}}</label>
+        </div>
+    </div>
+</div>

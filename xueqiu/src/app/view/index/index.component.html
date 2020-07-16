@@ -1,0 +1,18 @@
+<div class="Items">
+<div class="classItem" *ngFor="let item of quoteList" [class]='{fushu:item.quote.chg<0}'>
+    <h3>{{item.quote.name}}</h3>
+<div>{{item.quote.current}}</div>
+<p>{{item.quote.chg}}</p>
+<p>items.</p>
+</div>
+</div>
+<div class="main">
+    <div class="newsTab">
+        <div class="tabBtn" (click)="tabEvent(0)">推荐</div>
+        <div class="tabBtn" (click)="tabEvent(1)">7*24</div>
+        <div class="tabBtn" (click)="tabEvent(2)">沪深</div>
+        <div class="tabBtn" (click)="tabEvent(3)">科创板</div>
+    </div>
+    <router-outlet></router-outlet>
+
+</div>
